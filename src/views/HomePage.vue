@@ -1,6 +1,5 @@
 <template>
   <div class="animate">
-    <HeaderApp />
   </div>
 </template>
 
