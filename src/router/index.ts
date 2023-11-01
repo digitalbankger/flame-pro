@@ -1,25 +1,46 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+const Home = () => import("@/views/HomePage.vue")
+const Peoples = () => import("@/views/PeoplesList.vue")
+const People = () => import("@/views/PeopleId.vue")
+const Favorites = () => import("@/views/FavoriteList.vue")
 
 const routes: Array<RouteRecordRaw> = [
   {
-    path: '/',
-    name: 'home',
-    component: HomeView
+    path: "/",
+    component: Home,
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
+    path: "/peoples",
+    component: Peoples,
+  },
+  {
+    path: "/people/:id",
+    component: People,
+    props: true,
+  },
+  {
+    path: "/favorites",
+    component: Favorites,
+  },
 ]
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
 })
+
+// router.beforeEach((to, from, next) => {
+//   const publicPages = ['/', '/login', '/register', '/home'];
+//   const authRequired = !publicPages.includes(to.path);
+//   const loggedIn = localStorage.getItem('user');
+
+
+//   if (authRequired && !loggedIn) {
+//     next('/login');
+//   } else {
+//     next();
+//   }
+// });
+
 
 export default router
