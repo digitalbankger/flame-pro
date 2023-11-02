@@ -16,6 +16,8 @@ const { fetchPeople } = useApi();
 const search = ref('');
 const persons = ref([] as Person[]);
 
+let searchTimeout: any;
+
 // Извлекаю айди перса (???)
 const getPersonId = (url: string) => {
   const matches = url.match(/\/(\d+)\/$/);
