@@ -35,6 +35,11 @@ li {
     padding-bottom: 1rem;
 }
 
+.m-tb-1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
 .text-left {
     text-align: left;
 }
@@ -98,12 +103,29 @@ li {
 }
 
 .table {
+    border-radius: 20px;
     width: 80%;
-    border: 1px solid #67cea8;
+    background-color: #f8fffb;
+}
+
+thead {
+    background-color: rgb(43, 195, 139);
+    color: #fff;
+}
+
+th:first-child {
+    border-radius: 20px 0 0 0;
+    padding: 10px 20px;
+}
+
+
+th:last-child {
+    border-radius: 0 20px 0 0;
+    padding: 10px 20px;
 }
 
 .table tbody tr:nth-child(even) {
-    background-color: #f2faf7;
+    background-color: #e7f5f0;
 }
 
 th {

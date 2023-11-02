@@ -1,12 +1,12 @@
 <template>
-  <table class="table p-tb-1">
+  <table class="table m-tb-1">
     <thead>
       <tr class="text-left upper table-head">
         <th class="w-20">name</th>
         <th class="w-20">height</th>
         <th class="w-20">mass</th>
         <th class="w-20">hair_color</th>
-        <th class="text-right w-40">Add Favorite/Remove favorite</th>
+        <th class="text-right w-40">Add Favorite Remove favorite</th>
       </tr>
     </thead>
     <tbody>

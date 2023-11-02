@@ -44,7 +44,7 @@ watch(search, () => {
   clearTimeout(searchTimeout);
   searchTimeout = setTimeout(() => {
     searchPeople();
-  }, 1500); 
+  }, 500); 
 });
 // Подгружаю апи до монтирования
 onMounted(() => {
