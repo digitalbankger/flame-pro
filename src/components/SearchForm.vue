@@ -39,7 +39,10 @@ const searchPeople = async () => {
 };
 // Ватчер на слежку инпута
 watch(search, () => {
-  searchPeople();
+  clearTimeout(searchTimeout);
+  searchTimeout = setTimeout(() => {
+    searchPeople();
+  }, 1500); 
 });
 // Подгружаю апи до монтирования
 onMounted(() => {
